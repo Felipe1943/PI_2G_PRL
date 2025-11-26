@@ -182,3 +182,85 @@ export function Profile({ onNavigate, onLogout }: ProfileProps) {
               </div>
               <Switch defaultChecked />
             </div>
+            <Separator />
+            
+            <div className="flex items-center justify-between">
+              <div className="space-y-0.5">
+                <Label>Relatórios Automáticos</Label>
+                <p className="text-sm text-slate-600">Receba relatórios mensais por email</p>
+              </div>
+              <Switch defaultChecked />
+            </div>
+            
+            <Separator />
+            
+            <div className="flex items-center justify-between">
+              <div className="space-y-0.5">
+                <Label>Recomendações</Label>
+                <p className="text-sm text-slate-600">Receba insights e dicas de sustentabilidade</p>
+              </div>
+              <Switch defaultChecked />
+            </div>
+            
+            <Separator />
+            
+            <div className="flex items-center justify-between">
+              <div className="space-y-0.5">
+                <Label>Atualizações do Sistema</Label>
+                <p className="text-sm text-slate-600">Notificações sobre novas funcionalidades</p>
+              </div>
+              <Switch />
+            </div>
+
+            <div className="pt-4">
+              <Label htmlFor="email">Email para Notificações</Label>
+              <Input id="email" type="email" defaultValue="contato@fazendaverde.com.br" className="mt-2" />
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Integration */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Integrações</CardTitle>
+            <CardDescription>Conecte sistemas externos para automatizar a coleta de dados</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center justify-between p-4 border rounded-lg">
+              <div>
+                <div className="text-slate-900">Sistema ERP</div>
+                <p className="text-sm text-slate-600">Conecte seu ERP para importar dados automaticamente</p>
+              </div>
+              <Button variant="outline">Conectar</Button>
+            </div>
+            
+            <div className="flex items-center justify-between p-4 border rounded-lg">
+              <div>
+                <div className="text-slate-900">Sensores IoT</div>
+                <p className="text-sm text-slate-600">Integre sensores para monitoramento em tempo real</p>
+              </div>
+              <Button variant="outline">Conectar</Button>
+            </div>
+            
+            <div className="flex items-center justify-between p-4 border rounded-lg">
+              <div>
+                <div className="text-slate-900">Google Sheets</div>
+                <p className="text-sm text-slate-600">Importe planilhas do Google Sheets</p>
+              </div>
+              <Button variant="outline">Conectar</Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Save Button */}
+        <div className="flex justify-end gap-3">
+          <Button variant="outline">Cancelar</Button>
+          <Button className="bg-green-600 hover:bg-green-700">
+            <Save className="size-4 mr-2" />
+            Salvar Alterações
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
