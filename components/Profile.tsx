@@ -156,3 +156,29 @@ export function Profile({ onNavigate, onLogout }: ProfileProps) {
                 </SelectContent>
               </Select>
             </div>
+            
+            <div className="p-4 bg-green-50 rounded-lg">
+              <p className="text-sm text-green-900">
+                <span>🎯 Com uma redução de 30% até 2025, você economizará aproximadamente 13.440 kg CO₂ e contribuirá significativamente para o meio ambiente.</span>
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Notifications */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Bell className="size-5" />
+              Notificações e Alertas
+            </CardTitle>
+            <CardDescription>Configure como você deseja receber atualizações</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="space-y-0.5">
+                <Label>Alertas de Meta</Label>
+                <p className="text-sm text-slate-600">Receba notificações quando ultrapassar sua meta mensal</p>
+              </div>
+              <Switch defaultChecked />
+            </div>
